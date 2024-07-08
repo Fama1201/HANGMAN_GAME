@@ -29,8 +29,6 @@ const char *words[NUM_WORDS]={
 
 };
 
-
-
 void clearScreen() {
     // Clear the screen 
     #ifdef _WIN32
@@ -76,16 +74,15 @@ const char* get_random_word() {
 
 int main() {
     int option;
-    char palabra[100];
     const char *random_word;
 
     srand(time(0)); // Inicializa el generador de números aleatorios con la hora actual
 
     do {
         clearScreen();
-        printTitle();
+        printTitle();                                                       
         printMenu();
-        scanf("%d", &option);
+        scanf("%d", &option);           
 
         switch (option) {
             case 1:
@@ -96,8 +93,20 @@ int main() {
 
                 random_word = get_random_word(); // Obtiene una palabra al azar
                 printf("Random word: %s\n", random_word); // Imprime la palabra seleccionada
+                printf("************************************************************************************************************\n");
+                printf("*                                        ---------                                   _________            *\n");
+                printf("*                                        |       |                                  | 0 0 0 0 |           *\n");
+                printf("*          DIE!!!                                |        Save me! :(               | 0 0 0 0 |           *\n");
+                printf("*         O   O                                  |       O                          | 0 0 0 0 |           *\n");
+                printf("*        /|\\ /|\\                                 |      /|\\                         | 0  _  0 |           *\n");
+                printf("*        / \\ / \\                              ___|      / \\                         |   | |   |           *\n");
+                printf("* --------------------------------------------------------------------------------------------------------*\n");
+                printf("************************************************************************************************************\n");
+                puts("WORD:");
 
-                // Aquí implementa la lógica del juego de ahorcado
+
+
+
 
                 break;
             case 2:
